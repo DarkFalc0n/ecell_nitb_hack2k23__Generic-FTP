@@ -20,5 +20,6 @@ class StyledAppBar extends AppBar {
           title: Text(titleString ?? ""),
           leading: leadingWidget,
           actions: actionWidgets,
+          centerTitle: true,
         );
 }

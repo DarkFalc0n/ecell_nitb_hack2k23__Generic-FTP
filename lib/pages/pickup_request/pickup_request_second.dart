@@ -1,7 +1,9 @@
-import 'package:ecell_nitb_hack2k23__generic_ftp/common/widgets/widgets.dart';
+import 'package:ecell_nitb_hack2k23__generic_ftp/pages/pickup_request/pickup_request_third.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../common/widgets/widgets.dart';
 
 class PickupRequestSecondPage extends StatelessWidget {
   const PickupRequestSecondPage({Key? key}) : super(key: key);
@@ -33,6 +35,14 @@ class PickupRequestSecondPage extends StatelessWidget {
               ),
             ),
             StyledButton(
+              height: 50.h,
+              width: 150.w,
+              onClick: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PickupRequestThirdPage(),
+                ),
+              ),
               child: Center(
                 child: Text(
                   'Next',
@@ -43,9 +53,6 @@ class PickupRequestSecondPage extends StatelessWidget {
                   ),
                 ),
               ),
-              height: 50.h,
-              width: 150.w,
-              onClick: () {},
             )
           ],
         ),
