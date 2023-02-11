@@ -49,10 +49,14 @@ class PickupRequestOnePage extends StatelessWidget {
                 crossAxisCount: 3,
                 crossAxisSpacing: 15.w,
                 mainAxisSpacing: 15.h,
-                children: List.generate(
-                  9,
-                  (index) => const CategoryTile(),
-                ),
+                children: confirmTile
+                    .map(
+                      (e) => CategoryTile(
+                        desc: e['desc'].toString(),
+                        iconPath: e['icon'].toString(),
+                      ),
+                    )
+                    .toList(),
               ),
             ),
             40.verticalSpace,

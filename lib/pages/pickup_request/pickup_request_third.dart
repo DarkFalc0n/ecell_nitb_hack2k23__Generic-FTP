@@ -1,3 +1,4 @@
+import 'package:ecell_nitb_hack2k23__generic_ftp/pages/confirm_request/confirm_request.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -93,6 +94,28 @@ class PickupRequestThirdPage extends StatelessWidget {
                 filled: true,
                 hintText: 'Search for location',
                 suffixIcon: const Icon(Icons.search),
+              ),
+            ),
+            46.verticalSpace,
+            StyledButton(
+              height: 50.h,
+              width: 200.w,
+              onClick: () => Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ConfirmRequestPage(),
+                ),
+                (route) => false,
+              ),
+              child: Center(
+                child: Text(
+                  'Confirm location',
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ),
             )
           ],

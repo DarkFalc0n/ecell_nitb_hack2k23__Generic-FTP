@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
           child: Icon(
             Icons.menu,
             color: Colors.black,
-            size: 24.w,
+            size: 28.w,
           ),
         ),
         actionWidgets: [
@@ -36,12 +36,13 @@ class HomePage extends StatelessWidget {
                   'Alex Hales',
                   style: GoogleFonts.poppins(
                     color: Colors.black,
-                    fontSize: 12.sp,
+                    fontSize: 16.sp,
                   ),
                 ),
-                6.horizontalSpace,
-                const CircleAvatar(
+                12.horizontalSpace,
+                CircleAvatar(
                   foregroundColor: Colors.redAccent,
+                  radius: 24.r,
                 )
               ],
             ),
@@ -51,7 +52,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          60.verticalSpace,
+          54.verticalSpace,
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 33.w),
             child: RichText(
@@ -59,7 +60,7 @@ class HomePage extends StatelessWidget {
                 text: 'TRASH TODAY\n',
                 style: GoogleFonts.oswald(
                   color: const Color(0xFF386641),
-                  fontSize: 24.sp,
+                  fontSize: 26.sp,
                   fontWeight: FontWeight.bold,
                   letterSpacing: -1,
                 ),
@@ -68,7 +69,7 @@ class HomePage extends StatelessWidget {
                     text: 'TREASURE \nTOMORROW.',
                     style: GoogleFonts.oswald(
                       color: const Color(0xFF386641),
-                      fontSize: 38.sp,
+                      fontSize: 40.sp,
                       fontWeight: FontWeight.bold,
                       height: 1.sp,
                     ),
