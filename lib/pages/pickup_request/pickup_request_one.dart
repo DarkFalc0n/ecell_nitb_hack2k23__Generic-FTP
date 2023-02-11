@@ -1,3 +1,4 @@
+import 'package:ecell_nitb_hack2k23__generic_ftp/pages/pickup_request/pickup_request_second.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,6 +60,12 @@ class PickupRequestOnePage extends StatelessWidget {
               child: StyledButton(
                 width: 150.w,
                 height: 50.h,
+                onClick: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (builder) => const PickupRequestSecondPage(),
+                  ),
+                ),
                 child: Center(
                   child: Text(
                     'Next',
