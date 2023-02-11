@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../common/widgets/widgets.dart';
+import '../pickup_request/pickup_request_one.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -118,74 +119,81 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     children: [
                       23.09.verticalSpace,
-                      Container(
-                        decoration: BoxDecoration(
-                          // color: const Color(0xFFE9F1D5),
-                          gradient: const LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [
-                                Color(0xFFA7C957),
-                                Color(0xFF608A48),
-                              ]),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(15.r),
+                      GestureDetector(
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const PickupRequestOnePage(),
                           ),
                         ),
-                        width: 286.11.w,
-                        height: 167.81.h,
-                        child: Stack(
-                          children: [
-                            Center(
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 15.35.h),
-                                    child: Image.asset(
-                                      'assets/imgs/pickup.png',
-                                      width: 192.1.w,
-                                      height: 107.44.h,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: double.infinity,
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Request Pickup',
-                                          style: GoogleFonts.poppins(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        11.65.horizontalSpace,
-                                        Text(
-                                          String.fromCharCode(Icons
-                                              .arrow_forward_outlined
-                                              .codePoint),
-                                          style: TextStyle(
-                                            inherit: false,
-                                            color: Colors.white,
-                                            fontSize: 22.w,
-                                            fontWeight: FontWeight.w700,
-                                            fontFamily: Icons
-                                                .arrow_forward_outlined
-                                                .fontFamily,
-                                            package: Icons
-                                                .arrow_forward_outlined
-                                                .fontPackage,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            // color: const Color(0xFFE9F1D5),
+                            gradient: const LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  Color(0xFFA7C957),
+                                  Color(0xFF608A48),
+                                ]),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(15.r),
                             ),
-                          ],
+                          ),
+                          width: 286.11.w,
+                          height: 167.81.h,
+                          child: Stack(
+                            children: [
+                              Center(
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 15.35.h),
+                                      child: Image.asset(
+                                        'assets/imgs/pickup.png',
+                                        width: 192.1.w,
+                                        height: 107.44.h,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: double.infinity,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'Request Pickup',
+                                            style: GoogleFonts.poppins(
+                                              color: Colors.white,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          11.65.horizontalSpace,
+                                          Text(
+                                            String.fromCharCode(Icons
+                                                .arrow_forward_outlined
+                                                .codePoint),
+                                            style: TextStyle(
+                                              inherit: false,
+                                              color: Colors.white,
+                                              fontSize: 22.w,
+                                              fontWeight: FontWeight.w700,
+                                              fontFamily: Icons
+                                                  .arrow_forward_outlined
+                                                  .fontFamily,
+                                              package: Icons
+                                                  .arrow_forward_outlined
+                                                  .fontPackage,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Row(
