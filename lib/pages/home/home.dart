@@ -189,7 +189,38 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       Row(
-                        children: [],
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(21.w),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(15.r),
+                                ),
+                                color: const Color(0xFFE9F1D5),
+                              ),
+                              height: 83.5.h,
+                              width: 133.w,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 21.w,
+                              right: 0.0,
+                              bottom: 21.w,
+                            ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(15.r),
+                                ),
+                                color: const Color(0xFFE9F1D5),
+                              ),
+                              height: 83.5.h,
+                              width: 133.w,
+                            ),
+                          )
+                        ],
                       )
                     ],
                   ),
