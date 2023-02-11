@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../common/widgets/widgets.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        leading: Padding(
+      backgroundColor: Colors.white,
+      appBar: StyledAppBar(
+        leadingWidget: Padding(
           padding: EdgeInsets.only(
             top: 24.h,
             bottom: 24.h,
@@ -23,8 +24,7 @@ class HomePage extends StatelessWidget {
             size: 24.w,
           ),
         ),
-        toolbarHeight: 72.h,
-        actions: [
+        actionWidgets: [
           Padding(
             padding: EdgeInsets.only(
               right: 30.w,
