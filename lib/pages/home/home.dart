@@ -1,4 +1,5 @@
 import 'package:ecell_nitb_hack2k23__generic_ftp/pages/credits/credits.dart';
+import 'package:ecell_nitb_hack2k23__generic_ftp/pages/trackRequest/track_request.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -230,7 +231,12 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            onTap: () {},
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const RequestTrackPage(),
+                              ),
+                            ),
                           ),
                           GestureDetector(
                             child: Padding(
