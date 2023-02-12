@@ -1,9 +1,9 @@
-import 'package:ecell_nitb_hack2k23__generic_ftp/pages/pickup_request/pickup_request_second.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../common/widgets/widgets.dart';
+import 'pickup_request_second.dart';
 
 class PickupRequestOnePage extends StatelessWidget {
   const PickupRequestOnePage({Key? key}) : super(key: key);
@@ -49,7 +49,7 @@ class PickupRequestOnePage extends StatelessWidget {
                 crossAxisCount: 3,
                 crossAxisSpacing: 15.w,
                 mainAxisSpacing: 15.h,
-                children: confirmTile
+                children: categoryTile
                     .map(
                       (e) => CategoryTile(
                         desc: e['desc'].toString(),
