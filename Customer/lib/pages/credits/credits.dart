@@ -7,6 +7,27 @@ import 'package:google_fonts/google_fonts.dart';
 class CreditsPage extends StatelessWidget {
   const CreditsPage({Key? key}) : super(key: key);
 
+
+
+  Future<http.Response?> gerCredits() async {
+  try {
+
+    var url = Uri.https('esummit-back.onrender.com', 'credits/creatgetfinalcreditsorder');
+    var response = await http.post(
+      url,
+      body: jsonencode({"id":user['id']})
+      headers: {
+        "Content-type": "application/json",
+      },
+    );
+    print(response.body);
+    return response;
+  } catch (err) {
+    print(err);
+    return null;
+  }
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
