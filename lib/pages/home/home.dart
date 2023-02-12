@@ -1,3 +1,4 @@
+import 'package:ecell_nitb_hack2k23__generic_ftp/pages/credits/credits.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -199,36 +200,76 @@ class HomePage extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Padding(
-                            padding: EdgeInsets.all(21.w),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(15.r),
+                          GestureDetector(
+                            child: Padding(
+                              padding: EdgeInsets.all(21.w),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(15.r),
+                                  ),
+                                  color: const Color(0xFFE9F1D5),
                                 ),
-                                color: const Color(0xFFE9F1D5),
+                                height: 83.5.h,
+                                width: 133.w,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                      width: 70.w,
+                                      height: 70.w,
+                                      child: Image.asset('assets/imgs/map.png'),
+                                    ),
+                                    Text(
+                                      'Track Requests',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.w500),
+                                    )
+                                  ],
+                                ),
                               ),
-                              height: 83.5.h,
-                              width: 133.w,
+                            ),
+                            onTap: () {},
+                          ),
+                          GestureDetector(
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                top: 21.w,
+                                right: 0.0,
+                                bottom: 21.w,
+                              ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(15.r),
+                                  ),
+                                  color: const Color(0xFFE9F1D5),
+                                ),
+                                height: 83.5.h,
+                                width: 133.w,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset('assets/imgs/coin.png'),
+                                    Text(
+                                      'My Credits',
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 14.sp,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const CreditsPage(),
+                              ),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              top: 21.w,
-                              right: 0.0,
-                              bottom: 21.w,
-                            ),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(15.r),
-                                ),
-                                color: const Color(0xFFE9F1D5),
-                              ),
-                              height: 83.5.h,
-                              width: 133.w,
-                            ),
-                          )
                         ],
                       )
                     ],
